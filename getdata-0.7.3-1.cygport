@@ -1,0 +1,20 @@
+inherit python
+
+DESCRIPTION="Dirfile database reference implementation"
+HOMEPAGE="http://getdata.sourceforge.net/"
+SRC_URI="mirror://sourceforge/getdata/${P}.tar.bz2"
+PATCH_URI="0.7.3-vpath.patch"
+
+PKG_NAMES="getdata libgetdata4 libgetdata-devel libf95getdata2 libf95getdata-devel
+	   libfgetdata2 libfgetdata-devel libgetdata++2 libgetdata++-devel
+	   python-pygetdata"
+getdata_CONTENTS="--exclude=man3 usr/bin/*.exe usr/share/doc/ usr/share/man/"
+libf95getdata2_CONTENTS="usr/bin/cygf95getdata-2.dll"
+libf95getdata_devel_CONTENTS="usr/include/getdata.mod usr/lib/libf95getdata.*"
+libfgetdata2_CONTENTS="usr/bin/cygfgetdata-2.dll"
+libfgetdata_devel_CONTENTS="usr/include/getdata.f usr/lib/libfgetdata.*"
+libgetdata4_CONTENTS="usr/bin/cyggetdata-4.dll"
+libgetdata_devel_CONTENTS="usr/include/*.h usr/lib/libgetdata.* usr/lib/pkgconfig/ usr/share/man/man3/"
+libgetdata__2_CONTENTS="usr/bin/cyggetdata++-2.dll"
+libgetdata___devel_CONTENTS="usr/include/getdata/ usr/lib/libgetdata++.*"
+python_pygetdata_CONTENTS=${PYTHON_SITELIB#/}

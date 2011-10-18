@@ -1,0 +1,8 @@
+category: Database
+requires: libf95getdata2 libfgetdata-devel
+external-source: getdata
+sdesc: "DirFile database reference implementation (F95 development)"
+ldesc: "The GetData Project is the reference implementation of the 
+Dirfile Standards, a filesystem-based, column-oriented database format 
+for time-ordered binary data. The Dirfile database format is designed to 
+provide a fast, simple format for storing and reading data."
