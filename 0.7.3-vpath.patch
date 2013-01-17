@@ -4,8 +4,8 @@
  SUBDIRS = . ${F77_SUBDIR} ${CXX_SUBDIR} ${PY_SUBDIR} ${IDL_SUBDIR}
  
  make_parameters$(EXEEXT): $(make_parameters_SOURCES) $(nodist_make_parameters_SOURCES)
--	${BUILDCC} -I../src -o make_parameters$(EXEEXT) $(srcdir)/$(make_parameters_SOURCES)
-+	${BUILDCC} -I$(top_builddir)/src -I$(top_srcdir)/src -o make_parameters$(EXEEXT) $(srcdir)/$(make_parameters_SOURCES)
+-	${BUILDCC} $(DEFS) -I../src -o make_parameters$(EXEEXT) $(srcdir)/$(make_parameters_SOURCES)
++	${BUILDCC} $(DEFS) -I$(top_builddir)/src -I$(top_srcdir)/src -o make_parameters$(EXEEXT) $(srcdir)/$(make_parameters_SOURCES)
  
  clean-local:
  	rm -rf *~ 

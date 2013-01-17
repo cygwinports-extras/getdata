@@ -1,8 +1,0 @@
-category: Database
-requires: libbz2_1 libgcc1 liblzma5 zlib0
-external-source: getdata
-sdesc: "DirFile database reference implementation (C runtime)"
-ldesc: "The GetData Project is the reference implementation of the 
-Dirfile Standards, a filesystem-based, column-oriented database format 
-for time-ordered binary data. The Dirfile database format is designed to 
-provide a fast, simple format for storing and reading data."
