@@ -1,22 +1,27 @@
 inherit perl python autotools
 
 NAME="getdata"
-VERSION=0.8.2
+VERSION=0.8.5
 RELEASE=1
-CATEGORY="Database"
+CATEGORY="Libs"
 SUMMARY="DirFile database reference implementation"
 DESCRIPTION="The GetData Project is the reference implementation of the Dirfile
 Standards, a filesystem-based, column-oriented database format for time-ordered
 binary data. The Dirfile database format is designed to provide a fast, simple
 format for storing and reading data."
 HOMEPAGE="http://getdata.sourceforge.net/"
-SRC_URI="mirror://sourceforge/getdata/${P}.tar.bz2"
-PATCH_URI="0.7.3-vpath.patch
-           0.8.2-cygwin-perl.patch"
+SRC_URI="mirror://sourceforge/getdata/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="
+	0.7.3-vpath.patch
+	0.8.5-cygwin-ldflags.patch
+	0.8.5-cygwin-nonnull.patch
+	0.8.5-cygwin-perl.patch
+"
 
 PKG_NAMES="getdata libgetdata5 libgetdata-devel libf95getdata2 libf95getdata-devel
 	   libfgetdata2 libfgetdata-devel libgetdata++3 libgetdata++-devel
 	   perl-GetData python-pygetdata"
+getdata_CATEGORY="Database"
 getdata_CONTENTS="--exclude=man3 usr/bin/*.exe usr/share/doc/ usr/share/man/"
 libf95getdata2_SUMMARY="${SUMMARY} (Fortran 95 runtime)"
 libf95getdata2_CONTENTS="usr/bin/cygf95getdata-2.dll"

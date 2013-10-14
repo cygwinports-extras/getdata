@@ -1,14 +1,3 @@
---- origsrc/getdata-0.7.3/bindings/Makefile.am	2011-03-14 16:54:05.000000000 -0500
-+++ src/getdata-0.7.3/bindings/Makefile.am	2011-10-18 17:37:30.971021700 -0500
-@@ -46,7 +46,7 @@ nodist_make_parameters_SOURCES = ../src/
- SUBDIRS = . ${F77_SUBDIR} ${CXX_SUBDIR} ${PY_SUBDIR} ${IDL_SUBDIR}
- 
- make_parameters$(EXEEXT): $(make_parameters_SOURCES) $(nodist_make_parameters_SOURCES)
--	${BUILDCC} $(DEFS) -I../src -o make_parameters$(EXEEXT) $(srcdir)/$(make_parameters_SOURCES)
-+	${BUILDCC} $(DEFS) -I$(top_builddir)/src -I$(top_srcdir)/src -o make_parameters$(EXEEXT) $(srcdir)/$(make_parameters_SOURCES)
- 
- clean-local:
- 	rm -rf *~ 
 --- origsrc/getdata-0.7.3/bindings/python/Makefile.am	2011-03-14 16:54:05.000000000 -0500
 +++ src/getdata-0.7.3/bindings/python/Makefile.am	2011-10-18 17:42:41.411412400 -0500
 @@ -34,7 +34,7 @@ python_LTLIBRARIES = pygetdata.la

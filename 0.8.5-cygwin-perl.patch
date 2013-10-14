@@ -1,5 +1,5 @@
---- origsrc/getdata-0.8.2/bindings/perl/Makefile.am	2012-08-20 17:04:22.000000000 -0500
-+++ src/getdata-0.8.2/bindings/perl/Makefile.am	2013-01-17 14:18:51.829191600 -0600
+--- origsrc/getdata-0.8.5/bindings/perl/Makefile.am	2013-10-13 23:54:35.184328900 -0500
++++ src/getdata-0.8.5/bindings/perl/Makefile.am	2013-10-13 23:42:25.000000000 -0500
 @@ -36,7 +36,7 @@ nodist_man3_MANS=blib/libdoc/GetData.$(P
  nodist_perl_SCRIPTS=blib/lib/GetData.pm
  
@@ -8,7 +8,7 @@
 +nodist_perlautogetdata_SCRIPTS=blib/arch/auto/GetData/GetData.bs blib/arch/auto/GetData/GetData.dll
  
  lib:
- 	mkdir $@
+ 	mkdir -p $@
 @@ -69,7 +69,7 @@ GetData.pm: GetData.pm.in make_parameter
  		$(PERL) $(srcdir)/funclist.pl lib/GetData.xs lib/simple_funcs.xs > $@
  	chmod a-w $@

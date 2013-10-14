@@ -1,0 +1,15 @@
+must be prefixed by -Wl, but is anyways the default
+
+--- origsrc/getdata-0.8.5/configure.ac	2013-04-05 21:09:26.000000000 -0500
++++ src/getdata-0.8.5/configure.ac	2013-10-13 23:38:51.012325300 -0500
+@@ -400,8 +400,8 @@ case "${host}" in
+   *-pc-mingw*)
+   NO_UNDEFINED=" -no-undefined"
+   NO_DLOPEN_TESTS=1 ;;
+-  *-pc-cygwin*)
+-  NO_UNDEFINED=" -no-undefined -enable-auto-import"
++  *-cygwin*)
++  NO_UNDEFINED=" -no-undefined"
+   NO_DLOPEN_TESTS=1 ;;
+   *) NO_DLOPEN_TESTS=0 ;;
+ esac
