@@ -2,7 +2,7 @@ inherit perl python autotools
 
 NAME="getdata"
 VERSION=0.8.5
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="DirFile database reference implementation"
 DESCRIPTION="The GetData Project is the reference implementation of the Dirfile
